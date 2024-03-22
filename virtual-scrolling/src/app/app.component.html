@@ -1,0 +1,17 @@
+<div>
+    <span> {{ title }} Usando framework!!</span> 
+    <div class="container">
+      <mat-card>
+        <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+          <div *cdkVirtualFor="let item of ds" class="example-item">
+            <div class="img-item">
+              <img src = "{{ item.thumbnailUrl}}" alt="{{item.title}}" />
+            </div>
+            <div class="p-item">
+              <p>{{item.title}}</p>
+            </div>
+          </div>
+        </cdk-virtual-scroll-viewport>
+      </mat-card>
+    </div>
+</div>
